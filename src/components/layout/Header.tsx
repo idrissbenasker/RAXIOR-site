@@ -16,12 +16,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="py-4 px-4 sm:px-6 lg:px-8 w-full border-b">
+    <header className="py-4 px-4 sm:px-6 lg:px-8 w-full border-b border-border bg-background">
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold font-heading text-primary">Agency</span>
+            <img 
+              src="/lovable-uploads/983dc5c3-2c18-4e10-8591-497406dd2924.png" 
+              alt="RAXIOR Logo" 
+              className="h-10 mr-2" 
+            />
+            <span className="text-2xl font-bold font-heading text-primary">RAXIOR</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -30,7 +35,7 @@ const Header = () => {
               <Link
                 key={item.label}
                 to={item.path}
-                className="text-gray-700 hover:text-primary font-medium transition-colors"
+                className="text-foreground hover:text-primary font-medium transition-colors"
               >
                 {item.label}
               </Link>
@@ -46,7 +51,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700"
+            className="md:hidden text-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <Menu size={24} />
@@ -60,13 +65,13 @@ const Header = () => {
               <Link
                 key={item.label}
                 to={item.path}
-                className="block text-gray-700 hover:text-primary font-medium py-2"
+                className="block text-foreground hover:text-primary font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <Button asChild className="w-full mt-2">
+            <Button asChild className="w-full mt-2 bg-primary text-primary-foreground hover:bg-primary/90">
               <Link to="/contact">Get Started</Link>
             </Button>
           </nav>
