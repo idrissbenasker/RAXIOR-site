@@ -38,7 +38,7 @@ const Testimonials = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">Client Testimonials</h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-muted-foreground">
             Don't just take our word for it - see what our clients have to say
           </p>
         </div>
@@ -48,7 +48,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id} 
-              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              className="bg-card p-6 rounded-lg shadow-md border border-border"
             >
               {/* Rating Stars */}
               <div className="flex mb-4">
@@ -58,16 +58,16 @@ const Testimonials = () => {
               </div>
               
               {/* Quote */}
-              <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
+              <p className="text-foreground mb-6 italic">"{testimonial.quote}"</p>
               
               {/* Client Info */}
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <User className="h-6 w-6 text-gray-500" />
+                <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center mr-3">
+                  <User className="h-6 w-6 text-muted-foreground" />
                 </div>
                 <div>
                   <p className="font-bold font-heading">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.company}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.company}</p>
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@ const Testimonials = () => {
 
         {/* Partner Logos */}
         <div className="text-center mb-8">
-          <p className="text-sm uppercase tracking-wider text-gray-500 mb-6">Trusted by leading companies</p>
+          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-6">Trusted by leading companies</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {partnerLogos.map((partner, index) => (
               <div key={index} className="h-8 grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all">

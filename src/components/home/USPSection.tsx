@@ -30,7 +30,7 @@ const USPSection = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">Why Choose Us</h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-muted-foreground">
             We deliver exceptional results through our unique approach
           </p>
         </div>
@@ -45,7 +45,7 @@ const USPSection = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold font-heading mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <p className="text-muted-foreground">{benefit.description}</p>
               </div>
             </div>
           ))}

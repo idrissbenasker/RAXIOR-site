@@ -59,11 +59,11 @@ const PortfolioPreview = () => {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">Our Work</h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-muted-foreground">
             Check out some of our recent projects
           </p>
         </div>
@@ -86,7 +86,7 @@ const PortfolioPreview = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <Link to={`/portfolio/${project.id}`} key={project.id}>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="aspect-w-16 aspect-h-10 overflow-hidden">
                   <img 
                     src={project.image} 
@@ -96,7 +96,7 @@ const PortfolioPreview = () => {
                 </div>
                 <div className="p-4">
                   <h3 className="text-lg font-bold font-heading">{project.title}</h3>
-                  <p className="text-sm text-gray-500 capitalize">{project.category}</p>
+                  <p className="text-sm text-muted-foreground capitalize">{project.category}</p>
                 </div>
               </div>
             </Link>

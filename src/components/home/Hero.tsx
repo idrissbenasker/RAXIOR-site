@@ -14,7 +14,7 @@ const Hero = () => {
               <span className="block">Creative Solutions</span> 
               <span className="block text-primary">for Your Business</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-muted-foreground mb-8">
               We deliver cutting-edge web development, impactful digital marketing, 
               and stunning design to help your business thrive in the digital world.
             </p>

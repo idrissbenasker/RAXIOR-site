@@ -44,11 +44,11 @@ const About = () => {
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold font-heading mb-4">About Us</h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-muted-foreground">
                 We're a team of passionate creatives and strategists dedicated to helping businesses thrive
               </p>
             </div>
@@ -61,14 +61,14 @@ const About = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold font-heading mb-6">Our Mission</h2>
-                <p className="text-lg text-gray-700 mb-6">
+                <p className="text-lg text-foreground mb-6">
                   We're on a mission to empower businesses with creative solutions that drive growth and make a lasting impact. We believe in combining data-driven strategies with innovative design to create experiences that resonate with audiences and deliver measurable results.
                 </p>
-                <p className="text-lg text-gray-700">
+                <p className="text-lg text-foreground">
                   Our approach is collaborative and client-focused. We take the time to understand your business, goals, and challenges to develop tailored solutions that meet your specific needs. We're committed to building long-term partnerships and helping our clients succeed in today's rapidly evolving digital landscape.
                 </p>
               </div>
-              <div className="bg-gray-50 p-8 rounded-lg">
+              <div className="bg-card p-8 rounded-lg">
                 <h3 className="text-2xl font-bold font-heading mb-6 text-center">Our Values</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {[
@@ -81,7 +81,7 @@ const About = () => {
                       <Award className="h-6 w-6 text-primary mr-3 mt-1" />
                       <div>
                         <h4 className="text-lg font-bold font-heading mb-1">{value.title}</h4>
-                        <p className="text-gray-600">{value.description}</p>
+                        <p className="text-muted-foreground">{value.description}</p>
                       </div>
                     </div>
                   ))}
@@ -92,18 +92,18 @@ const About = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold font-heading mb-4">Meet Our Team</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-muted-foreground">
                 The talented people behind our success
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+                <div key={index} className="bg-card rounded-lg overflow-hidden shadow-md">
                   <img 
                     src={member.image} 
                     alt={member.name} 
@@ -112,7 +112,7 @@ const About = () => {
                   <div className="p-6">
                     <h3 className="text-xl font-bold font-heading mb-1">{member.name}</h3>
                     <p className="text-primary text-sm mb-3">{member.title}</p>
-                    <p className="text-gray-600">{member.bio}</p>
+                    <p className="text-muted-foreground">{member.bio}</p>
                   </div>
                 </div>
               ))}
@@ -127,7 +127,7 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.value}</div>
-                  <div className="text-gray-600">{stat.label}</div>
+                  <div className="text-muted-foreground">{stat.label}</div>
                 </div>
               ))}
             </div>

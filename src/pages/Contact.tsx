@@ -62,11 +62,11 @@ const Contact = () => {
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold font-heading mb-4">Contact Us</h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-muted-foreground">
                 Have a question or ready to start a project? Get in touch with our team.
               </p>
             </div>
@@ -78,7 +78,7 @@ const Contact = () => {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="bg-card p-8 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold font-heading mb-6">Send Us a Message</h2>
                 
                 {submitSuccess ? (
@@ -164,8 +164,8 @@ const Contact = () => {
                     <Phone className="h-6 w-6 text-primary mt-1 mr-4" />
                     <div>
                       <h3 className="text-lg font-bold font-heading mb-1">Phone</h3>
-                      <p className="text-gray-700">(123) 456-7890</p>
-                      <p className="text-gray-600 text-sm">Monday-Friday, 9am-5pm</p>
+                      <p className="text-foreground">(123) 456-7890</p>
+                      <p className="text-muted-foreground text-sm">Monday-Friday, 9am-5pm</p>
                     </div>
                   </div>
                   
@@ -173,8 +173,8 @@ const Contact = () => {
                     <Mail className="h-6 w-6 text-primary mt-1 mr-4" />
                     <div>
                       <h3 className="text-lg font-bold font-heading mb-1">Email</h3>
-                      <p className="text-gray-700">contact@agency.com</p>
-                      <p className="text-gray-600 text-sm">We'll respond as quickly as possible</p>
+                      <p className="text-foreground">contact@raxior.com</p>
+                      <p className="text-muted-foreground text-sm">We'll respond as quickly as possible</p>
                     </div>
                   </div>
                   
@@ -182,16 +182,16 @@ const Contact = () => {
                     <MapPin className="h-6 w-6 text-primary mt-1 mr-4" />
                     <div>
                       <h3 className="text-lg font-bold font-heading mb-1">Office</h3>
-                      <p className="text-gray-700">123 Agency Street</p>
-                      <p className="text-gray-700">Creative City, Country</p>
-                      <p className="text-gray-600 text-sm">By appointment only</p>
+                      <p className="text-foreground">123 Tech Street</p>
+                      <p className="text-foreground">Innovation City, Country</p>
+                      <p className="text-muted-foreground text-sm">By appointment only</p>
                     </div>
                   </div>
                 </div>
                 
                 {/* Map (Placeholder) */}
-                <div className="mt-8 bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">Map Would Be Embedded Here</p>
+                <div className="mt-8 bg-muted h-64 rounded-lg flex items-center justify-center">
+                  <p className="text-muted-foreground">Map Would Be Embedded Here</p>
                 </div>
               </div>
             </div>
