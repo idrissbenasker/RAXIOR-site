@@ -26,7 +26,7 @@ const teamMembers = [
   {
     name: 'David Wilson',
     title: 'Design Lead',
-    bio: 'David's passion for beautiful, functional design helps our clients stand out in crowded markets.',
+    bio: "David's passion for beautiful, functional design helps our clients stand out in crowded markets.",
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
   }
 ];
