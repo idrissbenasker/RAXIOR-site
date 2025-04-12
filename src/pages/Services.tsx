@@ -163,10 +163,10 @@ const Services = () => {
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="container mx-auto text-center max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold font-heading mb-4">Our Services</h1>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-muted-foreground mb-8">
               Comprehensive solutions tailored to help your business thrive in the digital landscape
             </p>
           </div>
@@ -174,32 +174,32 @@ const Services = () => {
 
         {/* Service Categories */}
         {serviceCategories.map((category, index) => (
-          <section key={index} className={`py-16 px-4 sm:px-6 lg:px-8 ${index % 2 === 1 ? 'bg-gray-50' : 'bg-white'}`}>
+          <section key={index} className={`py-16 px-4 sm:px-6 lg:px-8 ${index % 2 === 1 ? 'bg-muted' : 'bg-background'}`}>
             <div className="container mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
                 <div className={`${index % 2 === 1 ? 'lg:order-last' : ''}`}>
                   <h2 className="text-3xl font-bold font-heading mb-4">{category.title}</h2>
-                  <p className="text-lg text-gray-600 mb-6">{category.description}</p>
+                  <p className="text-lg text-muted-foreground mb-6">{category.description}</p>
                 </div>
-                <div className="rounded-lg overflow-hidden shadow-lg">
+                <div className="rounded-lg overflow-hidden shadow-lg border border-border bg-card">
                   <img 
                     src={category.image} 
                     alt={category.title} 
-                    className="w-full h-auto"
+                    className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
-                  <div key={serviceIndex} className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                    <h3 className="text-xl font-bold font-heading mb-3">{service.name}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div key={serviceIndex} className="bg-card p-6 rounded-lg shadow-md border border-border hover:shadow-lg hover:border-primary/40 transition-all duration-300">
+                    <h3 className="text-xl font-bold font-heading mb-3 text-primary">{service.name}</h3>
+                    <p className="text-muted-foreground mb-4">{service.description}</p>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
                           <CheckCircle2 className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-card-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -211,10 +211,10 @@ const Services = () => {
         ))}
 
         {/* Custom Solutions */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted">
           <div className="container mx-auto text-center max-w-3xl">
             <h2 className="text-3xl font-bold font-heading mb-4">Need a Custom Solution?</h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-muted-foreground mb-8">
               We understand that every business is unique. Contact us to discuss your specific needs and how we can help you achieve your goals.
             </p>
             <Button size="lg" asChild>
