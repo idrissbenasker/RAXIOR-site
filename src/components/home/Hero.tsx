@@ -143,9 +143,9 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Hero Image - Enhanced mobile experience */}
+          {/* Hero Image - Enhanced mobile experience with better positioning */}
           <motion.div 
-            className="relative mt-6 lg:mt-0 mx-auto lg:mx-0 max-w-sm sm:max-w-md lg:max-w-none"
+            className="relative mt-10 lg:mt-0 mx-auto lg:mx-0 max-w-sm sm:max-w-md lg:max-w-none"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -217,24 +217,43 @@ const Hero = () => {
               </>
             )}
             
-            {/* Enhanced Mobile floating elements - better positioned and styled */}
+            {/* Enhanced Mobile floating elements - improved to match design */}
             {isMobile && (
-              <motion.div 
-                className="absolute -bottom-2 right-2 bg-card p-2.5 rounded-lg shadow-lg border border-border z-20"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 }}
-              >
-                <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-primary/20 p-1.5">
-                    <Palette className="h-4 w-4 text-primary" />
+              <>
+                <motion.div 
+                  className="absolute bottom-14 right-6 bg-card/90 backdrop-blur-sm p-4 rounded-lg shadow-md border border-border/50 z-20"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-full bg-primary/20 p-2.5">
+                      <Palette className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <div className="text-sm text-muted-foreground">Design</div>
+                      <div className="font-medium text-base">Creative Vision</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="text-xs text-muted-foreground">Design</div>
-                    <div className="font-medium text-xs">Creative Vision</div>
+                </motion.div>
+
+                <motion.div 
+                  className="absolute top-10 left-3 bg-card/90 backdrop-blur-sm p-3 rounded-lg shadow-md border border-border/50 z-20"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="rounded-full bg-primary/20 p-2">
+                      <Code className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <div className="text-xs text-muted-foreground">Development</div>
+                      <div className="font-medium text-sm">Modern Solutions</div>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </>
             )}
           </motion.div>
         </div>
