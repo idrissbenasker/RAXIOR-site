@@ -115,17 +115,17 @@ const Portfolio = () => {
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="container mx-auto text-center max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold font-heading mb-4">Our Portfolio</h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-muted-foreground">
               Explore our work and see how we've helped businesses achieve their goals
             </p>
           </div>
         </section>
 
         {/* Projects Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="container mx-auto">
             {/* Category Filter */}
             <div className="flex justify-center flex-wrap gap-2 mb-10">
@@ -150,7 +150,7 @@ const Portfolio = () => {
                 {filteredProjects.map((project) => (
                   <div 
                     key={project.id} 
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+                    className="bg-card rounded-lg overflow-hidden shadow-md border border-border hover:shadow-lg hover:border-primary/40 transition-all duration-300 cursor-pointer"
                     onClick={() => setSelectedProject(project.id)}
                   >
                     <div className="aspect-w-16 aspect-h-10 overflow-hidden">
@@ -163,12 +163,12 @@ const Portfolio = () => {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h3 className="text-xl font-bold font-heading">{project.title}</h3>
-                        <span className="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-700 capitalize">
+                        <span className="text-xs px-2 py-1 bg-muted rounded-full text-card-foreground capitalize">
                           {project.category}
                         </span>
                       </div>
-                      <p className="text-sm text-gray-500 mb-4">Client: {project.client}</p>
-                      <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+                      <p className="text-sm text-muted-foreground mb-4">Client: {project.client}</p>
+                      <p className="text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.tags.map((tag, index) => (
                           <span key={index} className="text-xs px-2 py-1 bg-primary/10 rounded-full text-primary">
@@ -197,19 +197,19 @@ const Portfolio = () => {
                 </Button>
 
                 {currentProject && (
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div className="bg-card rounded-lg shadow-md border border-border overflow-hidden">
                     <div className="aspect-w-16 aspect-h-9">
                       <img 
                         src={currentProject.image} 
                         alt={currentProject.title} 
-                        className="object-cover w-full max-h-[500px]"
+                        className="object-cover w-full max-h-[500px] opacity-90 hover:opacity-100 transition-opacity duration-300"
                       />
                     </div>
                     <div className="p-8">
                       <div className="flex flex-wrap justify-between items-start gap-4 mb-6">
                         <div>
                           <h2 className="text-3xl font-bold font-heading mb-2">{currentProject.title}</h2>
-                          <p className="text-gray-600">Client: {currentProject.client}</p>
+                          <p className="text-muted-foreground">Client: {currentProject.client}</p>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {currentProject.tags.map((tag, index) => (
@@ -221,17 +221,17 @@ const Portfolio = () => {
                       </div>
 
                       <div className="mb-8">
-                        <h3 className="text-xl font-bold font-heading mb-4">Project Overview</h3>
-                        <p className="text-gray-700">{currentProject.description}</p>
+                        <h3 className="text-xl font-bold font-heading mb-4 text-primary">Project Overview</h3>
+                        <p className="text-card-foreground">{currentProject.description}</p>
                       </div>
 
                       <div className="mb-8">
-                        <h3 className="text-xl font-bold font-heading mb-4">Results</h3>
+                        <h3 className="text-xl font-bold font-heading mb-4 text-primary">Results</h3>
                         <ul className="space-y-2">
                           {currentProject.results.map((result, index) => (
                             <li key={index} className="flex items-start">
                               <span className="text-primary font-bold mr-2">•</span>
-                              <span className="text-gray-700">{result}</span>
+                              <span className="text-card-foreground">{result}</span>
                             </li>
                           ))}
                         </ul>
