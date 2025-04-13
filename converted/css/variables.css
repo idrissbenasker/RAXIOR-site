@@ -1,0 +1,106 @@
+
+:root {
+  /* Colors */
+  /* Dark mode by default - based on original project */
+  --color-background: #222629;
+  --color-foreground: #f2f2f2;
+  --color-card: #47484F;
+  --color-card-foreground: #f2f2f2;
+  --color-primary: #86C232;
+  --color-primary-foreground: #222629;
+  --color-secondary: #686E70;
+  --color-secondary-foreground: #f2f2f2;
+  --color-muted: #47484F;
+  --color-muted-foreground: #b3b3b3;
+  --color-accent: #86C232;
+  --color-accent-foreground: #222629;
+  --color-border: #686E70;
+  --color-input: #686E70;
+  --color-destructive: #e11d48;
+  --color-destructive-foreground: #fafafa;
+
+  /* Typography */
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+
+  /* Border Radius */
+  --radius: 0.5rem;
+  --radius-md: 0.375rem;
+  --radius-sm: 0.25rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Transitions */
+  --transition-all: all 0.3s ease;
+  --transition-colors: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  --transition-opacity: opacity 0.3s ease;
+  --transition-transform: transform 0.3s ease;
+  
+  /* Container widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1400px;
+  
+  /* Z-index layers */
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-auto: auto;
+}
+
+/* Color scheme for browsers */
+:root {
+  color-scheme: dark;
+}
+
+/* Light mode class for future implementation */
+.light {
+  --color-background: #ffffff;
+  --color-foreground: #222629;
+  --color-card: #f2f2f2;
+  --color-card-foreground: #222629;
+  --color-primary: #86C232;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #686E70;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #e6e6e6;
+  --color-muted-foreground: #686E70;
+  --color-accent: #86C232;
+  --color-accent-foreground: #ffffff;
+  --color-border: #47484F;
+  --color-input: #47484F;
+}
